@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/catalpa_tools
+   */site-packages/catalpa_tools
+
+[run]
+branch = true
+source =
+    catalpa_tools
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
