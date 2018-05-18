@@ -12,6 +12,7 @@ TEST_CONFIGS = {
         'd': 'd_3'}
 }
 
+
 def merge_config(fp, original_config=False):
     ''' Merges a json file in a location into an original config dict
     >>> import io
@@ -51,6 +52,7 @@ def merge_config_file(file_path, original_config=False):
     with open(file_path, 'r') as fp:
         return merge_config(fp, original_config)
 
+
 def files_in_directory_ancestors(directory, file_name=DEFAULT_FILE_NAME, stop_depth=False):
     ''' Walk up a directory tree finding all files matching file_name
 
@@ -61,7 +63,7 @@ def files_in_directory_ancestors(directory, file_name=DEFAULT_FILE_NAME, stop_de
         yield os.path.join(directory, file_name)
     if directory == parent_dir or stop_depth is 1:
         raise StopIteration
-    yield from files_in_directory_ancestors(parent_dir, file_name, stop_depth -1 if stop_depth else stop_depth)
+    yield from files_in_directory_ancestors(parent_dir, file_name, stop_depth - 1 if stop_depth else stop_depth)
 
 
 def test_files_in_directory_ancestors():
@@ -84,7 +86,6 @@ def test_files_in_directory_ancestors():
         with open(file_location_3, 'w+t') as fp_config_3:
             json.dump(TEST_CONFIGS[3], fp_config_3)
 
-
         files = list(files_in_directory_ancestors(dir_3, config_file_name, False))
         expected_files = [file_location_3, file_location_2, file_location_1]
         assert files == expected_files
@@ -94,4 +95,3 @@ def test_files_in_directory_ancestors():
         assert files == expected_files
     finally:
         shutil.rmtree(dir_1)
-
