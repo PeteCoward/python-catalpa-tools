@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
+      - | |travis| |requires|
         | |coveralls|
         | |landscape| |scrutinizer| |codacy| |codeclimate|
     * - package
@@ -24,10 +24,6 @@ Overview
 .. |travis| image:: https://travis-ci.org/PeteCoward/python-catalpa-tools.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/PeteCoward/python-catalpa-tools
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/PeteCoward/python-catalpa-tools?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/PeteCoward/python-catalpa-tools
 
 .. |requires| image:: https://requires.io/github/PeteCoward/python-catalpa-tools/requirements.svg?branch=master
     :alt: Requirements Status

@@ -17,7 +17,7 @@
 default_context:
 
     _template:                 'gh:ionelmc/cookiecutter-pylibrary'
-    appveyor:                  'yes'
+    appveyor:                  'no'
     c_extension_function:      'longest'
     c_extension_module:        '_catalpa_tools'
     c_extension_optional:      'no'
